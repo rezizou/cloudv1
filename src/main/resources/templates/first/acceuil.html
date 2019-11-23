@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+
+<title>Acceuil</title>
+</head>
+<body>
+<h1 align="center">Hello from the other side </h1>
+<h2 align="center">la vue Acceuil </h2>
+<ul>
+<li th:text="${ec}">Le Nom de l'ecole</li>
+<li th:text="${forma}">Le nom de la Formation</li>
+<li th:text="${msg}">...</li>
+<li th:text="${ms}">...</li>
+
+<ul th:each="name : ${names}">
+
+<li th:text=${name}>...</li>
+</ul>
+
+</ul>
+<ul th:each="anim : ${zoo}">
+
+<li>
+<p>
+<span th:text="${anim.nom}"></span>
+<span th:text="${anim.age}"></span></p>
+
+</li>
+
+</ul>
+
+
+
+</body>
+</html>
